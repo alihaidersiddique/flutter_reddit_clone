@@ -11,6 +11,7 @@ class Pallete {
 
   // Themes
   static var darkModeAppTheme = ThemeData.dark().copyWith(
+    useMaterial3: true,
     scaffoldBackgroundColor: blackColor,
     cardColor: greyColor,
     appBarTheme: const AppBarTheme(
@@ -30,6 +31,7 @@ class Pallete {
   static var lightModeAppTheme = ThemeData.light().copyWith(
     scaffoldBackgroundColor: whiteColor,
     cardColor: greyColor,
+    useMaterial3: true,
     appBarTheme: const AppBarTheme(
       backgroundColor: whiteColor,
       elevation: 0,

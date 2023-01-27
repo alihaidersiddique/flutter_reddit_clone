@@ -1,5 +1,5 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
-import 'dart:convert';
+
 import 'package:flutter/foundation.dart';
 
 class UserModel {
@@ -54,20 +54,16 @@ class UserModel {
 
   factory UserModel.fromMap(Map<String, dynamic> map) {
     return UserModel(
-      name: map['name'] as String,
-      profilePic: map['profilePic'] as String,
-      banner: map['banner'] as String,
-      uid: map['uid'] as String,
-      isAuthenticated: map['isAuthenticated'] as bool,
-      karma: map['karma'] as int,
-      awards: List<String>.from((map['awards'] as List<String>)),
-    );
+        name: map['name'] as String,
+        profilePic: map['profilePic'] as String,
+        banner: map['banner'] as String,
+        uid: map['uid'] as String,
+        isAuthenticated: map['isAuthenticated'] as bool,
+        karma: map['karma'] as int,
+        awards: List<String>.from(
+          (map['awards']),
+        ));
   }
-
-  String toJson() => json.encode(toMap());
-
-  factory UserModel.fromJson(String source) =>
-      UserModel.fromMap(json.decode(source) as Map<String, dynamic>);
 
   @override
   String toString() {
